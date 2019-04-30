@@ -1,0 +1,249 @@
+EESchema Schematic File Version 4
+LIBS:jlink-swd-adapter-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_20 J1
+U 1 1 5BEFED2B
+P 1950 3600
+F 0 "J1" H 1420 3646 50  0000 R CNN
+F 1 "20-WAY JLINK IDC" H 1420 3555 50  0000 R CNN
+F 2 "Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical" H 2400 2550 50  0001 L TNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.dui0499b/DUI0499B_system_design_reference.pdf" V 1600 2350 50  0001 C CNN
+	1    1950 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BEFEDB5
+P 1950 2550
+F 0 "R1" H 2020 2596 50  0000 L CNN
+F 1 "0R Link" H 2020 2505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1880 2550 50  0001 C CNN
+F 3 "~" H 1950 2550 50  0001 C CNN
+	1    1950 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 2800 1950 2750
+Wire Wire Line
+	1850 2800 1850 2400
+Wire Wire Line
+	1850 2400 1950 2400
+Wire Wire Line
+	1950 2400 2650 2400
+Connection ~ 1950 2400
+NoConn ~ 2550 3100
+NoConn ~ 2550 4000
+NoConn ~ 2550 4100
+NoConn ~ 2550 3800
+NoConn ~ 2550 3400
+$Comp
+L power:GND #PWR01
+U 1 1 5BEFF041
+P 1850 4550
+F 0 "#PWR01" H 1850 4300 50  0001 C CNN
+F 1 "GND" H 1855 4377 50  0000 C CNN
+F 2 "" H 1850 4550 50  0001 C CNN
+F 3 "" H 1850 4550 50  0001 C CNN
+	1    1850 4550
+	1    0    0    -1  
+$EndComp
+Text GLabel 3000 2400 2    50   Input ~ 0
+VTREF
+Text GLabel 3000 3200 2    50   Output ~ 0
+~RESET
+Text GLabel 3000 3500 2    50   Output ~ 0
+SWCLK
+Text GLabel 3000 3600 2    50   BiDi ~ 0
+SWDIO
+Text GLabel 3000 3700 2    50   Input ~ 0
+SWO
+Wire Wire Line
+	2550 3200 3000 3200
+Wire Wire Line
+	2550 3500 3000 3500
+Wire Wire Line
+	2550 3600 3000 3600
+Wire Wire Line
+	2550 3700 3000 3700
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J3
+U 1 1 5BEFF355
+P 5950 3500
+F 0 "J3" H 6000 3817 50  0000 C CNN
+F 1 "6-WAY SWD IDC" H 6000 3726 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" H 5950 3500 50  0001 C CNN
+F 3 "~" H 5950 3500 50  0001 C CNN
+	1    5950 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5400 3400 0    50   Output ~ 0
+VTREF
+Text GLabel 5400 3500 0    50   Input ~ 0
+~RESET
+Text GLabel 6600 3400 2    50   BiDi ~ 0
+SWDIO
+Text GLabel 6600 3500 2    50   Input ~ 0
+SWCLK
+Text GLabel 6600 3600 2    50   Output ~ 0
+SWO
+$Comp
+L power:GND #PWR04
+U 1 1 5BEFF566
+P 5400 3600
+F 0 "#PWR04" H 5400 3350 50  0001 C CNN
+F 1 "GND" H 5405 3427 50  0000 C CNN
+F 2 "" H 5400 3600 50  0001 C CNN
+F 3 "" H 5400 3600 50  0001 C CNN
+	1    5400 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3400 5750 3400
+Wire Wire Line
+	5400 3500 5750 3500
+Wire Wire Line
+	5400 3600 5750 3600
+Wire Wire Line
+	6250 3400 6600 3400
+Wire Wire Line
+	6250 3500 6600 3500
+Wire Wire Line
+	6250 3600 6600 3600
+Text GLabel 3000 2750 2    50   Output ~ 0
+VCC
+Wire Wire Line
+	3000 2750 2650 2750
+Connection ~ 1950 2750
+Wire Wire Line
+	1950 2750 1950 2700
+$Comp
+L Connector_Generic:Conn_01x06 J4
+U 1 1 5BF0005E
+P 6000 4700
+F 0 "J4" H 6079 4692 50  0000 L CNN
+F 1 "ST NUCLEO DEBUG" H 6079 4601 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 6000 4700 50  0001 C CNN
+F 3 "~" H 6000 4700 50  0001 C CNN
+	1    6000 4700
+	1    0    0    -1  
+$EndComp
+Text GLabel 5400 4500 0    50   Output ~ 0
+VTREF
+Text GLabel 5400 4600 0    50   Input ~ 0
+SWCLK
+Text GLabel 5400 4800 0    50   BiDi ~ 0
+SWDIO
+Text GLabel 5400 4900 0    50   Input ~ 0
+~RESET
+Text GLabel 5400 5000 0    50   Output ~ 0
+SWO
+$Comp
+L power:GND #PWR02
+U 1 1 5BF0045C
+P 4850 4700
+F 0 "#PWR02" H 4850 4450 50  0001 C CNN
+F 1 "GND" H 4855 4527 50  0000 C CNN
+F 2 "" H 4850 4700 50  0001 C CNN
+F 3 "" H 4850 4700 50  0001 C CNN
+	1    4850 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4500 5800 4500
+Wire Wire Line
+	5400 4600 5800 4600
+Wire Wire Line
+	4850 4700 5800 4700
+Wire Wire Line
+	5400 4800 5800 4800
+Wire Wire Line
+	5400 4900 5800 4900
+Wire Wire Line
+	5400 5000 5800 5000
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5BF012A4
+P 5950 2350
+F 0 "J2" H 6030 2342 50  0000 L CNN
+F 1 "POWER" H 6030 2251 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5950 2350 50  0001 C CNN
+F 3 "~" H 5950 2350 50  0001 C CNN
+	1    5950 2350
+	1    0    0    -1  
+$EndComp
+Text GLabel 5400 2350 0    50   Input ~ 0
+VCC
+$Comp
+L power:GND #PWR03
+U 1 1 5BF0153D
+P 5400 2450
+F 0 "#PWR03" H 5400 2200 50  0001 C CNN
+F 1 "GND" H 5405 2277 50  0000 C CNN
+F 2 "" H 5400 2450 50  0001 C CNN
+F 3 "" H 5400 2450 50  0001 C CNN
+	1    5400 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2350 5750 2350
+Wire Wire Line
+	5400 2450 5700 2450
+Wire Wire Line
+	1850 4400 1850 4550
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5BF02893
+P 2650 2400
+F 0 "#FLG0101" H 2650 2475 50  0001 C CNN
+F 1 "PWR_FLAG" H 2650 2574 50  0000 C CNN
+F 2 "" H 2650 2400 50  0001 C CNN
+F 3 "~" H 2650 2400 50  0001 C CNN
+	1    2650 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 2650 2400
+Wire Wire Line
+	2650 2400 3000 2400
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5BF02913
+P 2650 2750
+F 0 "#FLG0102" H 2650 2825 50  0001 C CNN
+F 1 "PWR_FLAG" H 2650 2924 50  0000 C CNN
+F 2 "" H 2650 2750 50  0001 C CNN
+F 3 "~" H 2650 2750 50  0001 C CNN
+	1    2650 2750
+	1    0    0    -1  
+$EndComp
+Connection ~ 2650 2750
+Wire Wire Line
+	2650 2750 1950 2750
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5BF02CE7
+P 5700 2450
+F 0 "#FLG0103" H 5700 2525 50  0001 C CNN
+F 1 "PWR_FLAG" H 5700 2623 50  0000 C CNN
+F 2 "" H 5700 2450 50  0001 C CNN
+F 3 "~" H 5700 2450 50  0001 C CNN
+	1    5700 2450
+	1    0    0    1   
+$EndComp
+Connection ~ 5700 2450
+Wire Wire Line
+	5700 2450 5750 2450
+$EndSCHEMATC
